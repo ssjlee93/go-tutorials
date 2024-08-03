@@ -1,6 +1,6 @@
-# README
+# Get Started with Go
 Notes for the tutorial  
-["Get Started with Go"](https://go.dev/doc/tutorial/getting-started)
+[Get Started with Go](https://go.dev/doc/tutorial/getting-started)
 
 ## Write some code
 3. Enable dependency tracking for your code.  
