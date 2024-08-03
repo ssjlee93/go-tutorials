@@ -1,4 +1,5 @@
 # Return and handle an error
+[Return and handle an error](https://go.dev/doc/tutorial/handle-errors)  
 error handling in Go
 
 [Effective Go](https://go.dev/doc/effective_go#multiple-returns)  
