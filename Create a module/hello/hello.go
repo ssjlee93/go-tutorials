@@ -38,4 +38,39 @@ func main() {
 	// if no error was returned,
 	// print the message to the console
 	fmt.Println(message)
+
+	// ========== Hellos ==========
+
+	// A slice of names.
+	names := make([]string, 0)
+	more := true
+
+	for more {
+		fmt.Println("Enter a name: ")
+		text, _ := reader.ReadString('\n')
+		text = strings.Replace(text, "\n", "", -1)
+		names = append(names, text)
+
+		fmt.Println("Do you have more? (y/n")
+		ans, _ := reader.ReadString('\n')
+		ans = strings.Replace(ans, "\n", "", -1)
+		if ans == "n" {
+			more = false
+		} else if ans == "y" {
+			continue
+		} else {
+			fmt.Println("Invalid input")
+		}
+	}
+
+	// Request greeting messages for the names.
+	messages, err := greetings.Hellos(names)
+	if err != nil {
+		log.Fatal(err)
+	}
+	// If no error was returned, print the returned map of
+	// messages to the console.
+	for _, msg := range messages {
+		fmt.Println(msg)
+	}
 }
