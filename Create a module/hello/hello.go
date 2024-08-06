@@ -43,6 +43,8 @@ func main() {
 
 	// A slice of names.
 	names := make([]string, 0)
+
+	// logic to take input from console
 	more := true
 
 	for more {
