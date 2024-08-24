@@ -7,22 +7,28 @@ packages, variables, and functions
 ### Packages
 every Go program is bundled in packages
 programs start running in package `main`
+
 ### Imports
 factored import statements > repeated imports
+
 ### Exported names
 `math.pi` is unexported  
-`math.Pi` is exported and can be used  
+`math.Pi` is exported and can be used
 
 exporting is similar to `public` in Java.  
 it is more close to exporting in JavaScript.  
+
 ### Functions
 Go allows multiple args.  
+
 ### Functions continued
 Go has shorthand for multiple args.
+
 ### Multiple results
 Go allows multiple results from one method.  
 This is different from traditional statically typed languages 
 that require you to bundle multiple data into different data structures.  
+
 ### Named return values
 instead of initializing return values and returning them manually,
 Go allows us to name the return values so that we may skip initializing them.  
@@ -31,15 +37,19 @@ Go allows us to name the return values so that we may skip initializing them.
 seems like returning all local variables.  
 only use for short functions.  
 low readability in long functions.  
+
 ### Variables
 `var` declares variables  
 can be used at package level.  
+
 ### Variables with initializers
 `var` can have 1 initializer per variable.  
 type can be omitted with initializer.  
+
 ### Short variable declarations
 inside a func, variable can initialize and assign with `:=`  
 Outside func requires `var`
+
 ### Basic types
 * bool
 
@@ -56,8 +66,10 @@ Outside func requires `var`
 * float32 float64
 
 * complex64 complex128
+
 ### Zero values
 variables without initial values are initialized with default zero values.  
+
 ### Type conversion
 `T<v>` converts a value v to type T.  
 ```go
@@ -71,6 +83,7 @@ f := float64(x)
 u := unit(f)
 ```
 Similar to type casting in Java.  
+
 ### Type inference
 Unlike C or Java that only support statical types, Go allows type inferences.  
 This allows the programmer to treat Go like dynamically typed language.  
@@ -80,10 +93,12 @@ i := 42           // int
 f := 3.142        // float64
 g := 0.867 + 0.5i // complex128
 ```
+
 ### Constants
 `const` declares constants.  
 supports character, string, boolean, numeric  
 can be used globally and locally.  
+
 ### Numeric Constants
 Numeric constants are high-precision values.  
 > An untyped constant takes the type needed by its context.  
