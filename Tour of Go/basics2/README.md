@@ -77,5 +77,4 @@ but execution only after all surrounding function returns
 ## Stacking defers
 Deferred calls are in stack(LIFO)
 
-[Defer, Panic, and Recover](https://go.dev/blog/defer-panic-and-recover
-)
+[Defer, Panic, and Recover](https://go.dev/blog/defer-panic-and-recover)
