@@ -1,4 +1,4 @@
-package main
+package flowcontrol
 
 import (
 	"fmt"
@@ -7,8 +7,7 @@ import (
 	"time"
 )
 
-func main() {
-	fmt.Println("Basics")
+func FlowControl() {
 	fmt.Println("Flow control statements : for, if, else, switch, and defer")
 
 	// for

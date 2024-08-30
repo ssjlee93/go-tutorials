@@ -1,7 +1,7 @@
 // "Packages, variables, and functions"
 
-// "Packages
-package main
+// "Packages"
+package basics
 
 // "Imports"
 // factored import statements.
@@ -37,7 +37,8 @@ const (
 	Small = Big >> 99
 )
 
-func main() {
+func Basics() {
+	fmt.Println("Packages, variables, and functions")
 	// "Packages"
 	fmt.Println("My favorite num is", rand.Intn(10))
 	// "Imports"

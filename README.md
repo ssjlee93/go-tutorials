@@ -4,5 +4,11 @@ Go programming language tutorials
 
 ## package structure 
 
-1. [Getting started](./Getting%20started)
-2. [Create a module](./Create%20a%20module)
+1. [Getting started](./gettingstarted)
+2. [Create a module](./createmodule)
+3. [Tour of Go](./tour)
+   1. [Basics](./tour/basics)
+   2. [Flow Control](./tour/flowcontrol)
+       * [Blog : Defer, Panic, Recover](./deferpanicandrecover)
+   3. [More Types](./tour/moretypes)
+      * 

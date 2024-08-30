@@ -1,35 +1,32 @@
-# Tour of Go
-notes for [A Tour of Go](https://go.dev/tour/welcome/1)
+# packages, variables, and functions
+[basics](https://go.dev/tour/basics/1)
 
-## basics
-packages, variables, and functions
-
-### Packages
+## Packages
 every Go program is bundled in packages
 programs start running in package `main`
 
-### Imports
+## Imports
 factored import statements > repeated imports
 
-### Exported names
+## Exported names
 `math.pi` is unexported  
 `math.Pi` is exported and can be used
 
 exporting is similar to `public` in Java.  
 it is more close to exporting in JavaScript.  
 
-### Functions
+## Functions
 Go allows multiple args.  
 
-### Functions continued
+## Functions continued
 Go has shorthand for multiple args.
 
-### Multiple results
+## Multiple results
 Go allows multiple results from one method.  
 This is different from traditional statically typed languages 
 that require you to bundle multiple data into different data structures.  
 
-### Named return values
+## Named return values
 instead of initializing return values and returning them manually,
 Go allows us to name the return values so that we may skip initializing them.  
 
@@ -38,19 +35,19 @@ seems like returning all local variables.
 only use for short functions.  
 low readability in long functions.  
 
-### Variables
+## Variables
 `var` declares variables  
 can be used at package level.  
 
-### Variables with initializers
+## Variables with initializers
 `var` can have 1 initializer per variable.  
 type can be omitted with initializer.  
 
-### Short variable declarations
+## Short variable declarations
 inside a func, variable can initialize and assign with `:=`  
 Outside func requires `var`
 
-### Basic types
+## Basic types
 * bool
 
 * string
@@ -67,10 +64,10 @@ Outside func requires `var`
 
 * complex64 complex128
 
-### Zero values
+## Zero values
 variables without initial values are initialized with default zero values.  
 
-### Type conversion
+## Type conversion
 `T<v>` converts a value v to type T.  
 ```go
 var x type = 3
@@ -84,7 +81,7 @@ u := unit(f)
 ```
 Similar to type casting in Java.  
 
-### Type inference
+## Type inference
 Unlike C or Java that only support statical types, Go allows type inferences.  
 This allows the programmer to treat Go like dynamically typed language.  
 Depending on the syntax of right hand, different numeric types are inferred.  
@@ -94,12 +91,12 @@ f := 3.142        // float64
 g := 0.867 + 0.5i // complex128
 ```
 
-### Constants
+## Constants
 `const` declares constants.  
 supports character, string, boolean, numeric  
 can be used globally and locally.  
 
-### Numeric Constants
+## Numeric Constants
 Numeric constants are high-precision values.  
 > An untyped constant takes the type needed by its context.  
 

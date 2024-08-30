@@ -1,7 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/ssjlee93/go-tutorials/tour/basics"
+	"github.com/ssjlee93/go-tutorials/tour/flowcontrol"
+	"github.com/ssjlee93/go-tutorials/tour/moretypes"
+)
 
 func main() {
-	fmt.Println("ssjlee93 Tour of Go")
+	fmt.Println("ssjlee93 Go Tutorials")
+
+	fmt.Println("Tour of Go")
+	fmt.Println("Basics")
+	basics.Basics()
+	fmt.Println()
+
+	fmt.Println("Flowcontrol")
+	flowcontrol.FlowControl()
+	fmt.Println()
+
+	fmt.Println("Moretypes")
+	moretypes.MoreTypes()
+	fmt.Println()
+
 }

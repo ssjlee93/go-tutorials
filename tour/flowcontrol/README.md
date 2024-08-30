@@ -1,5 +1,5 @@
 # Flow control statements : for, if, else, switch, and defer
-notes [link](https://go.dev/tour/flowcontrol/1)
+notes [Flow Control](https://go.dev/tour/flowcontrol/1)
 
 ## for
 the only loop for Go  
@@ -77,4 +77,5 @@ but execution only after all surrounding function returns
 ## Stacking defers
 Deferred calls are in stack(LIFO)
 
-[Defer, Panic, and Recover](https://go.dev/blog/defer-panic-and-recover)
+
+
