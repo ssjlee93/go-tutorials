@@ -2,12 +2,51 @@
 [Defer, Panic, and Recover](https://go.dev/blog/defer-panic-and-recover)
 `Defer`, `Panic`, and `Recover` runs Go code in a separate goruntime.
 
+## Defer
 > Defer statement pushes a function call onto a list.  
 > The list of saved calls is executed after the surrounding function returns.  
 > Defer is commonly used to simplify functions that perform various clean-up actions.
 
 provided example is a clean-up.  
 without proper clean-up, application may lead to memory leaks.  
+
+3 rules to `defer` statements : 
+> 1. A deferred function’s arguments are evaluated when the defer statement is evaluated.
+> 2. Deferred function calls are executed in LIFO order after the surrounding function returns.
+> 3. Deferred functions may read and assign to the returning function’s named return values.
+
+3 is useful for modifying error return value of a function.  
+
+## Panic
+Panic stops ordinary flow and begins panicking.  
+
+Flow of panic : 
+func F() runs
+-> F() calls §panic§
+-> F execution stops
+-> any deferred functions execute normally
+-> F returns
+-> the caller thinks F as a call to §panic§
+-> ... repeat until all functions in §goruntime§ stack returns
+-> §goruntime§ crashes
+
+* §panic§ can be initiated by invoking direct
+* §panic§ can be caused by runtime errors
+
+## Recover
+> regains control of a panicking §goroutine§
+> only useful inside §defer§ functions
+> During normal execution, a call to recover will return nil and have no other effect. 
+> If the current §goroutine§ is panicking, a call to recover will capture the value given to panic and resume normal execution.
+
+recovers from §panic§ 
+
+## Further reading
+[JSON pkg](https://pkg.go.dev/encoding/json)  
+epitome of properly using §defer§, §panic§, and §recover§  
+
+> The convention in the Go libraries is that even when a package uses panic internally, 
+> its external API still presents explicit error return values.
 
 ## Asked Google Gemini
 Q: is `defer` in go similar to async-await in javascript? or Future-promise in Java?
