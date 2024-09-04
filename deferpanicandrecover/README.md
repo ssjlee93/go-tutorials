@@ -22,28 +22,28 @@ Panic stops ordinary flow and begins panicking.
 
 Flow of panic : 
 func F() runs
--> F() calls §panic§
+-> F() calls `panic`
 -> F execution stops
 -> any deferred functions execute normally
 -> F returns
--> the caller thinks F as a call to §panic§
--> ... repeat until all functions in §goruntime§ stack returns
--> §goruntime§ crashes
+-> the caller thinks F as a call to `panic`
+-> ... repeat until all functions in `goruntime` stack returns
+-> `goruntime` crashes
 
-* §panic§ can be initiated by invoking direct
-* §panic§ can be caused by runtime errors
+* `panic` can be initiated by invoking direct
+* `panic` can be caused by runtime errors
 
 ## Recover
-> regains control of a panicking §goroutine§
-> only useful inside §defer§ functions
+> regains control of a panicking `goroutine`
+> only useful inside `defer` functions
 > During normal execution, a call to recover will return nil and have no other effect. 
-> If the current §goroutine§ is panicking, a call to recover will capture the value given to panic and resume normal execution.
+> If the current `goroutine` is panicking, a call to recover will capture the value given to panic and resume normal execution.
 
-recovers from §panic§ 
+recovers from `panic` 
 
 ## Further reading
 [JSON pkg](https://pkg.go.dev/encoding/json)  
-epitome of properly using §defer§, §panic§, and §recover§  
+epitome of properly using `defer`, `panic`, and `recover`  
 
 > The convention in the Go libraries is that even when a package uses panic internally, 
 > its external API still presents explicit error return values.

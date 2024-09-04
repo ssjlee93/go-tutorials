@@ -73,8 +73,8 @@ func Panic() {
 }
 
 func f() {
-	// if below §defer§ function doesn't exist,
-	// §f()§ panics and §goruntime§ crashes.
+	// if below `defer` function doesn't exist,
+	// `f()` panics and `goruntime` crashes.
 	defer func() {
 		if r := recover(); r != nil {
 			fmt.Println("Recovered in f", r)
@@ -82,9 +82,9 @@ func f() {
 	}()
 	fmt.Println("Calling g.")
 	g(0)
-	// does not run since §panic§ will stop executions
-	// "g(4) behaves like a call to §panic§"
-	// moves on to §defer§ execution
+	// does not run since `panic` will stop executions
+	// "g(4) behaves like a call to `panic`"
+	// moves on to `defer` execution
 	fmt.Println("Returned normally from g.")
 }
 

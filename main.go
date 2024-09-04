@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/ssjlee93/go-tutorials/deferpanicandrecover"
+	"github.com/ssjlee93/go-tutorials/slicesintro"
 	"github.com/ssjlee93/go-tutorials/tour/basics"
 	"github.com/ssjlee93/go-tutorials/tour/flowcontrol"
 	"github.com/ssjlee93/go-tutorials/tour/moretypes"
@@ -26,6 +27,10 @@ func main() {
 
 	fmt.Println("deferpanicandrecover")
 	deferpanicandrecover.Panic()
+	fmt.Println()
+
+	fmt.Println("slicesintro")
+	slicesintro.Slicesintro()
 	fmt.Println()
 
 }

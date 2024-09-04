@@ -9,6 +9,6 @@ Go programming language tutorials
 3. [Tour of Go](./tour)
    1. [Basics](./tour/basics)
    2. [Flow Control](./tour/flowcontrol)
-       * [Blog : Defer, Panic, Recover](./deferpanicandrecover)
+      * [Blog : Defer, Panic, Recover](./deferpanicandrecover)
    3. [More Types](./tour/moretypes)
-      * 
+      * [Blog : Go Slices: usage and internals](./slicesintro)

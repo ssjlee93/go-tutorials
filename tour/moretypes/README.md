@@ -135,6 +135,8 @@ func append(s []T, vs ...T) []T
 
 Dynamically re-sizing
 
+Further reading :  
+[Go Slices: usage and internals](../../slicesintro)
 
 ## [sidenote] Why use pointers?
 Google offers Go style guide to follow the best practices.  
