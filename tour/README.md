@@ -6,4 +6,4 @@ available via offline.
 ## Table of contents
 1. [basics](./basics)
 2. [flow control](./flowcontrol)
-3. [more types](./moretypes)
+3. [more types](./more-types)

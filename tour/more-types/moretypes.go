@@ -1,4 +1,4 @@
-package moretypes
+package more_types
 
 import (
 	"fmt"
@@ -18,6 +18,26 @@ var (
 	v3 = Vertex{}      // X:0 and Y:0
 	pv = &Vertex{1, 2} // has type *Vertex
 )
+
+// Range
+var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+
+// Maps, Maps Literals
+type VertexMaps struct {
+	Lat, Long float64
+}
+
+var m map[string]VertexMaps
+
+// Maps Literals
+var mLiterals = map[string]VertexMaps{
+	"Bell Labs": VertexMaps{
+		40.68433, -74.39967,
+	},
+	"Google": VertexMaps{
+		37.42202, -122.08408,
+	},
+}
 
 func MoreTypes() {
 	fmt.Println("More types : structs, slices, and maps")
@@ -167,6 +187,43 @@ func MoreTypes() {
 	for i := 0; i < len(board); i++ {
 		fmt.Printf("%s\n", strings.Join(board[i], " "))
 	}
+
+	// Appending to a slice
+	var sAppend []int
+	printSlice(sAppend)
+
+	// 		append works on nil slices.
+	sAppend = append(sAppend, 0)
+	printSlice(sAppend)
+
+	// 		The slice grows as needed.
+	sAppend = append(sAppend, 1)
+	printSlice(sAppend)
+
+	// 		We can add more than one element at a time.
+	sAppend = append(sAppend, 2, 3, 4)
+	printSlice(sAppend)
+
+	// Range
+	for i, v := range pow {
+		fmt.Printf("2**%d = %d\n", i, v)
+	}
+
+	// Range continued
+	pow := make([]int, 10)
+	for i := range pow {
+		pow[i] = 1 << uint(i) // == 2**i
+	}
+	for _, value := range pow {
+		fmt.Printf("%d\n", value)
+	}
+
+	// Maps
+	m = make(map[string]VertexMaps)
+	m["Bell Labs"] = VertexMaps{
+		40.68433, -74.39967,
+	}
+	fmt.Println(m["Bell Labs"])
 }
 
 // Slice length and capacity

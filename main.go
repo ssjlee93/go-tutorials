@@ -6,7 +6,6 @@ import (
 	"github.com/ssjlee93/go-tutorials/slicesintro"
 	"github.com/ssjlee93/go-tutorials/tour/basics"
 	"github.com/ssjlee93/go-tutorials/tour/flowcontrol"
-	"github.com/ssjlee93/go-tutorials/tour/moretypes"
 )
 
 func main() {
@@ -19,10 +18,6 @@ func main() {
 
 	fmt.Println("Flowcontrol")
 	flowcontrol.FlowControl()
-	fmt.Println()
-
-	fmt.Println("Moretypes")
-	moretypes.MoreTypes()
 	fmt.Println()
 
 	fmt.Println("deferpanicandrecover")

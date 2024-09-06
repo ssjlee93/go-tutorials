@@ -19,6 +19,18 @@ fmt.Println(*p) // read i through the pointer p
 ```
 > This is known as "dereferencing" or "indirecting".
 
+### [sidenote] Why use pointers?
+Google offers Go style guide to follow the best practices.  
+[Go style guide](https://google.github.io/styleguide/go/)
+
+[receiver type](https://google.github.io/styleguide/go/decisions#receiver-type)
+
+key takeaway :
+> correctness wins over speed and simplicity
+
+if we need do not modify the value, use the value.  
+if we need to modify or mutate the receiver, use pointer
+
 ## Structs
 collection of fields
 
@@ -138,14 +150,85 @@ Dynamically re-sizing
 Further reading :  
 [Go Slices: usage and internals](../../slicesintro)
 
-## [sidenote] Why use pointers?
-Google offers Go style guide to follow the best practices.  
-[Go style guide](https://google.github.io/styleguide/go/)
+## Range
+`range` in `for` loop iterate over slices or maps.  
+returns index and copy of the value.  
 
-[receiver type](https://google.github.io/styleguide/go/decisions#receiver-type)
+copy of the value, not the value itself.  
 
-key takeaway : 
-> correctness wins over speed and simplicity
+## Range continued
+Skip a value
+```go
+for i, _ := range pow
+for _, value := range pow
+for i := range pow
+```
 
-if we need do not modify the value, use the value.  
-if we need to modify or mutate the receiver, use pointer
+## Exercise: Slices
+only works in Tour of Go site.  
+similar to Java, each element in each dimension needs to be constructed.
+
+values recommended to try :  
+* (i + j) / 2
+* i * j
+* i ^ j
+
+## Maps
+key value pair.  
+zero value = `nil`  
+`nil` has no key, no value  
+`make` constructs a map
+
+## Map literals
+like struct literals but with keys  
+
+## Map literals continued
+if top-level type is just type name, may omit it in the literals.  
+
+no need for constructor declaration in the literals.  
+
+## Mutating Maps
+similar syntax as Java, JS, and Python
+
+```go
+// insert or update
+m[key] = elem
+// retrieve
+elem = m[key]
+// delete
+delete(m, key)
+// test key
+elem, ok = m[key]
+elem, ok := m[key]
+```
+
+if `key` exists, `ok` is `true`. otherwise `false`.  
+if `key` does not exist, `elem` is zero value of specified type.  
+
+## Exercise: Maps
+```go
+strings.Fields(s)
+```
+returns an array of string divided on whitespaces.  
+same as String.split(" ")
+
+## Function values
+functions are values.  
+returned values from functions can be used as args.  
+
+treating function as an obj.  
+
+## Function closures
+> A closure is a function value that references variables from outside its body. 
+> The function may access and assign to the referenced variables; 
+> in this sense the function is "bound" to the variables.
+
+wraps each function to use separate instances of referenced variable.  
+closure to the referenced variable.  
+
+## Exercise: Fibonacci Closure
+was tough. looked it up.  
+follows standard formula :  
+```
+f_next = f_current + f_before
+```
