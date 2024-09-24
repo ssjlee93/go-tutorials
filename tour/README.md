@@ -7,3 +7,4 @@ available via offline.
 1. [basics](./basics)
 2. [flow control](./flowcontrol)
 3. [more types](./more-types)
+4. [methods](./methods)

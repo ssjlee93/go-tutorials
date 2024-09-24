@@ -13,6 +13,7 @@ in the order of creation
       * [Blog : Defer, Panic, Recover](./deferpanicandrecover)
    3. [More Types](./tour/more-types)
       * [Blog : Go Slices: usage and internals](./slicesintro)
+   4. [Methods](./tour/methods)
 
 ## Notes
 
