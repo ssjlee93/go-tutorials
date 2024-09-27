@@ -148,7 +148,7 @@ func append(s []T, vs ...T) []T
 Dynamically re-sizing
 
 Further reading :  
-[Go Slices: usage and internals](../../slicesintro)
+[Go Slices: usage and internals](../../slices-intro)
 
 ## Range
 `range` in `for` loop iterate over slices or maps.  

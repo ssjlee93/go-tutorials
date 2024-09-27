@@ -78,7 +78,7 @@ but execution only after all surrounding function returns
 Deferred calls are in stack(LIFO)
 
 Further reading:  
-[Defer, Panic, and Recover](../../deferpanicandrecover)
+[Defer, Panic, and Recover](../../defer-panic-and-recover)
 
 
 

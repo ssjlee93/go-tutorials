@@ -1,4 +1,4 @@
-package deferpanicandrecover
+package main
 
 import (
 	"fmt"

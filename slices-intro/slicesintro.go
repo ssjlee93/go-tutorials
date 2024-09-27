@@ -1,8 +1,8 @@
-package slicesintro
+package main
 
 import "fmt"
 
-func Slicesintro() {
+func main() {
 	var a [4]int
 	a[0] = 1
 	i := a[0]
