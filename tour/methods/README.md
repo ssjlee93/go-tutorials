@@ -133,4 +133,113 @@ empty interface = zero methods in interface.
 > An empty interface may hold values of any type.  
 > Empty interfaces are used by code that handles values of unknown type.
 
+## Type assertions
+[type-assertions](./type-assertions.go)
+> A type assertion provides access to an interface value's underlying concrete value.
 
+interface value = (value, type T)  
+type assertion = get T
+```go
+t := i.(T)
+```
+translation for above = asserThat(i.T == T) then t=i.value  
+
+if `i` does not contain T, 
+go throws the following error:  
+```shell
+panic: interface conversion: interface {} is string, not float64
+```
+
+to test or avoid panic, 
+type assertion can hold two values : 
+value and boolean for result of (assertTrue i.T == T)  
+```go
+t, ok := i.(T)
+```
+> If `i` holds a T, then `t` will be the underlying value and ok will be true.  
+> If not, `ok` will be false and `t` will be the zero value of type T, and no panic occurs.
+> Note the similarity between this syntax and that of reading from a map.
+
+```go
+// this syntax
+t, ok := i.(T)
+
+// reading from a map
+t, ok := m[KEY]
+```
+
+## Type switches
+[type-switches](./type-switches.go)  
+type switch = regular switch but checks for underlying type instead of value.  
+```go
+switch v := i.(type) {
+case T:
+    // here v has type T
+case S:
+    // here v has type S
+default:
+    // no match; here v has the same type as i
+}
+```
+in default case, `v` has the same type as `i` that may not be specified in the switch.
+
+## Stringers
+[stringers](./stringers.go)  
+```go
+type Stringer interface {
+    String() string
+}
+```
+this is one of the most common interface within `fmt`.
+
+## Exercise: Stringer
+[exercise_stringer](./exercise-stringers.go)  
+
+## Errors
+[errors](./errors.go)  
+`error` carries Go error state.  
+
+underlying interface :  
+```go
+type error interface {
+    Error() string
+}
+```
+
+example of error checking in Go.  
+```go
+i, err := strconv.Atoi("42")
+if err != nil {
+    fmt.Printf("couldn't convert number: %v\n", err)
+    return
+}
+fmt.Println("Converted integer:", i)
+```
+if `err == nil`, my code is successful.  
+if `err != nil`, my code is unsuccessful.  
+
+## Exercise: Errors
+[exercise-errors](./exercise-errors.go)  
+
+## Readers
+[readers](./readers.go)  
+`io.Reader()` is a popular interface.  
+`io.Reader()` has `Read()` method.  
+
+```go
+func (T) Read(b []byte) (n int, err error)
+```
+returns `io.EOF` as error value.  
+
+## Exercise: Readers
+[exercise-readers](./exercise-reader.go)  
+
+## Exercise: rot13Reader
+[exercise-rot-reader](./exercise-rot-reader.go)  
+
+## Images
+[images](./images.go)  
+[Package image](./https://pkg.go.dev/image#Image)  
+
+## Exercise: Images
+[exercise-images](./exercise-images.go)  

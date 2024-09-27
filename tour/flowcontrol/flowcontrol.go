@@ -137,18 +137,8 @@ func pow1(x, n, lim float64) float64 {
 // Exercise: Loops and Functions
 func Sqrt(x float64) float64 {
 	z := 1.0
-	count := 0
-	for {
-		count++
-		curr := z
-		curr -= (z*z - x) / (2 * z)
-		if curr == z {
-			diff := math.Abs(math.Sqrt(x) - z)
-			fmt.Printf("Sqrt = %g with %d tries. diff %g\n", z, count, diff)
-			return curr
-		} else {
-			z = curr
-		}
+	for i := 0; i <= 1000; i++ {
+		z -= (z*z - x) / (2 * z)
 	}
-
+	return z
 }
