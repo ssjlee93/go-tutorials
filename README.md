@@ -14,6 +14,8 @@ in the order of creation
    3. [More Types](./tour/more-types)
       * [Blog : Go Slices: usage and internals](./slices-intro)
    4. [Methods](./tour/methods)
+   5. [Generics](./tour/generics)
+   6. [Concurrency](./tour/concurrency)
 
 ## Notes
 
@@ -32,3 +34,4 @@ However, if you still place it and run the following, each file with `main` func
 ```shell
 go run <path-to-my-file-with-main>
 ```
+ 

@@ -8,3 +8,5 @@ available via offline.
 2. [flow control](./flowcontrol)
 3. [more types](./more-types)
 4. [methods](./methods)
+5. [generics](./generics)
+6. [concurrency](./concurrency)
