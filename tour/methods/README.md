@@ -98,7 +98,7 @@ no explicit inheritance necessary.
 
 implicit implementation decouples interfaces.  
 
-instead of using keywords like §implements§ in Java, 
+instead of using keywords like `implements` in Java, 
 Go allows its children to inherit by implementing just the methods.  
 
 ## Interface values
