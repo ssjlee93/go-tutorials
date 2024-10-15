@@ -16,6 +16,8 @@ in the order of creation
    4. [Methods](./tour/methods)
    5. [Generics](./tour/generics)
    6. [Concurrency](./tour/concurrency)
+4. [Getting started with multi-module workspaces](./workspaces)
+5. 
 
 ## Notes
 

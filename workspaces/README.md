@@ -3,43 +3,43 @@
 
 ## Create a module for your code¶
 
-§§§shell
+```shell
 // initialize module
 go mod init <module>
 
 // add a dependency
 go get <dependency>
-§§§
+```
 
 ## Create the workspace¶
 
-§§§shell
+```shell
 // initialize workspace
 go work init <directory>
 // create go.work for a workspace containing the modules in the <directory>
-§§§
+```
 
-§§§go
+```go
 go 1.23.0
 
 // this line allows go to run ./hello module
 use ./hello
-§§§
+```
 
-§§§shell
+```shell
 // in workspaces
 go run ./hello
-§§§
+```
 now, we can run the module from the workspace.  
 
 ## Download and modify the golang.org/x/example/hello module¶
-used §git submodule§  
+used `git submodule`  
 
-§§§shell
+```shell
 git submodule add <repo-url>
-§§§
+```
 
-§§§go
+```go
 // use the cloned module
 go work use <module-directory>
-§§§
+```
