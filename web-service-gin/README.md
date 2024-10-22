@@ -26,6 +26,6 @@ need DB in real-life.
 ## Write a handler to return all items¶
 
 ## Write a handler to add a new item¶
-tip: on mac, type multi lines in terminal with §\§ then enter.  
+tip: on mac, type multi lines in terminal with `\` then enter.  
 
 ## Write a handler to return a specific item¶

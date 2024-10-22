@@ -17,7 +17,9 @@ in the order of creation
    5. [Generics](./tour/generics)
    6. [Concurrency](./tour/concurrency)
 4. [Getting started with multi-module workspaces](./workspaces)
-5. 
+5. [Accessing relational database](./database-access)
+6. [Developing a RESTful API with Go and Gin](./web-service-gin)
+7. [Getting started with generics]()
 
 ## Notes
 

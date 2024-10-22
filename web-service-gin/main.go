@@ -7,7 +7,7 @@ import (
 )
 
 // album represents data about a record album.
-// §json:"<variable>"§ tells jsonIter to de/serialize go var to designated var name
+// `json:"<variable>"` tells jsonIter to de/serialize go var to designated var name
 type album struct {
 	ID     string  `json:"id"`
 	Title  string  `json:"title"`
