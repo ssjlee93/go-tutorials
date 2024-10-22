@@ -19,7 +19,8 @@ in the order of creation
 4. [Getting started with multi-module workspaces](./workspaces)
 5. [Accessing relational database](./database-access)
 6. [Developing a RESTful API with Go and Gin](./web-service-gin)
-7. [Getting started with generics]()
+7. [Getting started with generics](./generics)
+8. 
 
 ## Notes
 
