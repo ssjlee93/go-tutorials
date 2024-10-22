@@ -20,7 +20,7 @@ in the order of creation
 5. [Accessing relational database](./database-access)
 6. [Developing a RESTful API with Go and Gin](./web-service-gin)
 7. [Getting started with generics](./generics)
-8. 
+8. [Getting started with fuzzing](./fuzz)
 
 ## Notes
 

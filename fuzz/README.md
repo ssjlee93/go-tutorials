@@ -26,14 +26,16 @@ Done.
 fuzzing comes up with inputs for my code.  
 pros of using fuzzing : unpredictable output.  
 
-fuzz tests begin with §FuzzXXX§
-§t.Fuzz§ instead of §t.Run§
+fuzz tests begin with `FuzzXXX`
+`t.Fuzz` instead of `t.Run`
 
 run fuzz tests:  
-§§§go
+```go
 $ go test -fuzz=Fuzz
-§§§
+```
 
 ## Fix the invalid string error¶
+Done.  
 
 ## Fix the double reverse error¶
+Done.  
