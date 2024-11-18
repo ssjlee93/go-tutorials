@@ -21,6 +21,7 @@ in the order of creation
 6. [Developing a RESTful API with Go and Gin](./web-service-gin)
 7. [Getting started with generics](./generics)
 8. [Getting started with fuzzing](./fuzz)
+9. [Writing Web Applications with Go](./gowiki)
 
 ## Notes
 
