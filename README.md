@@ -22,6 +22,7 @@ in the order of creation
 7. [Getting started with generics](./generics)
 8. [Getting started with fuzzing](./fuzz)
 9. [Writing Web Applications with Go](./gowiki)
+10. [Blog : Strings, bytes, runes and characters in Go](./strings)
 
 ## Notes
 
