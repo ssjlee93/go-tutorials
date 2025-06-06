@@ -1,0 +1,9 @@
+go 1.24.2
+
+use (
+	./create-module/greetings
+	./create-module/hello
+	./getting-started
+)
+
+replace github.com/ssjlee93/go-tutorials/getting-started => ./getting-started
